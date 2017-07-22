@@ -1,8 +1,6 @@
-/**
- * Created by liu on 2016/7/11.
- */
+
 $(function(){
-    //ÍÆ¼öÇĞ»»·½·¨
+    //æ¨èåˆ‡æ¢æ–¹æ³•
     function myFuct(a){
         $('.main-banner ul li').removeClass('item')
         $(a).addClass('item');
@@ -15,7 +13,7 @@ $(function(){
        var a =  $(this)
         myFuct(a)
     });
-    //×Ô¶¯²¥·Å
+    //è‡ªåŠ¨æ’­æ”¾
     setInterval(function(){
         var a= $('.item').next();
         if(a.text()==false){
@@ -24,11 +22,11 @@ $(function(){
         }
         myFuct(a)
     },2000)
-    //´«µİÍ¼Æ¬Á´½Ó
+    //ä¼ é€’å›¾ç‰‡é“¾æ¥
     $('.main-banner').click(function(){
         window.location.href = $('.item').find('a').attr('href')
     });
-    //ÏÔÊ¾·ÖÏí
+    //æ˜¾ç¤ºåˆ†äº«
     $('.box-img,.main-media-box-img').mouseenter(function(){
         $(this).find('.main-share').css('display','block')
     });
@@ -36,14 +34,14 @@ $(function(){
         $('.main-share').css('display','none')
     });
 
-    //¸üĞÂÁĞ±íµÄÇĞ»»
+    //æ›´æ–°åˆ—è¡¨çš„åˆ‡æ¢
     $('.update-list .title').mouseenter(function(){
         $('.update-list .title').removeClass('active');
         $(this).addClass('active');
         $('.update-list-rank ul').removeClass('active');
         $('.update-list-rank-'+$(this).attr('name')).addClass('active')
     })
-    //Å¼ÊıÁĞ±³¾°É«
+    //å¶æ•°åˆ—èƒŒæ™¯è‰²
     $('.update-list-rank  li:odd').css('background-color','#eeeeee');
     $('.update-list-rank  li:even').css('background-color','white');
     $('.main-bar-box:odd').css('background-color','#eeeeee')
